@@ -1,0 +1,21 @@
+name: "💡 پیشنهاد قابلیت"
+description: "ایده‌ای برای بهتر شدن پروژه‌بان داری؟"
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: "چه مشکلی را حل می‌کند؟"
+      placeholder: "مثلاً: هر بار که ... مجبورم ..."
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: "پیشنهادت چیست؟"
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: "توضیح بیشتر (اختیاری)"

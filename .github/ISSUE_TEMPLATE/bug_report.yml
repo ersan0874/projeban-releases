@@ -1,0 +1,38 @@
+name: "🐞 گزارش مشکل"
+description: "چیزی درست کار نمی‌کند؟ اینجا بنویس."
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "ممنون که وقت گذاشتی. هر چه دقیق‌تر بنویسی، زودتر درست می‌شود. لطفاً هیچ رمز، توکن یا کلید API در گزارش نگذار."
+  - type: textarea
+    id: what
+    attributes:
+      label: "چه اتفاقی افتاد؟"
+      description: "چه انتظاری داشتی و به جایش چه شد؟"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "مراحل تکرار مشکل"
+      placeholder: "۱. رفتم به ...\n۲. زدم روی ...\n۳. این خطا آمد ..."
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: "نسخه پروژه‌بان"
+      placeholder: "مثلاً v1.0.0-beta.1"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: "مدل گوشی و نسخه اندروید"
+      placeholder: "مثلاً Samsung A54، اندروید ۱۴"
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "عکس صفحه (اختیاری)"
+      description: "عکس را اینجا بکش و رها کن."
