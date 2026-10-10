@@ -1,5 +1,10 @@
 <div align="center">
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/logo/logo-white.png">
+  <img src="docs/logo/logo.png" alt="لوگوی پروژه‌بان" width="128">
+</picture>
+
 # پروژه‌بان · Projeban
 
 **همه پروژه‌ها، کارها و ایده‌هایت در یک اپ، با دستیاری که حرفت را می‌فهمد.**
