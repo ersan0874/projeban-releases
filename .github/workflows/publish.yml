@@ -1,0 +1,31 @@
+name: Publish release
+on:
+  push:
+    branches: [upload]
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.2.0-beta.1
+          target_commitish: main
+          name: پروژه‌بان v1.2.0-beta.1
+          prerelease: false
+          make_latest: true
+          files: projeban-v1.2.0-beta.1.apk
+          body: |
+            <div dir="rtl">
+
+            ## تازه‌ها
+
+            - بخش جدید «فایل‌ها، لینک‌ها و رمزها» در هر پروژه: لینک‌ها، آدرس‌ها (سرور، IP، دامنه یا مکان)، فایل‌ها و رمزها و توکن‌های همان پروژه یک‌جا
+            - رمزها و توکن‌های هر پروژه در گاوصندوق اصلی هم دیده می‌شوند و می‌شود بر اساس پروژه فیلترشان کرد
+            - دکمه کلید بالای داشبورد برای باز کردن سریع گاوصندوق رمزها
+
+            روی نسخه قبلی نصب می‌شود و اطلاعاتت می‌ماند (همان کلید امضا).
+
+            </div>
