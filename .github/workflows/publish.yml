@@ -1,0 +1,32 @@
+name: Publish release
+on:
+  push:
+    branches: [upload-v1.3.0]
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.3.0-beta.1
+          target_commitish: main
+          name: پروژه‌بان v1.3.0-beta.1
+          prerelease: false
+          make_latest: true
+          files: projeban-v1.3.0-beta.1.apk
+          body: |
+            <div dir="rtl">
+
+            ## تازه‌ها
+
+            - همه قابلیت‌ها در MCP: لینک‌ها، آدرس‌ها و فایل‌های هر پروژه، پیش‌نویس‌ها و رمزهای گاوصندوق حالا از Claude و هر کلاینت MCP دیگر در دسترس‌اند
+            - ابزارهای تازه MCP: لینک/آدرس پروژه، پیش‌نویس‌ها، ویرایش فاز و ایده، یادآور تسک، مرحله فعلی پروژه و رمزها
+            - لینک‌ها، آدرس‌ها، نام و نوع فایل‌ها و پیش‌نویس‌ها با سرور Cloudflare خودت همگام می‌شوند (خود فایل‌ها روی گوشی می‌مانند)
+            - رمزها فقط با روشن کردن «رمزها برای هوش مصنوعی (MCP) قابل دیدن باشند» در تنظیمات ← همگام‌سازی به سرور فرستاده می‌شوند؛ با خاموش کردنش از سرور پاک می‌شوند
+
+            روی نسخه قبلی نصب می‌شود و اطلاعاتت می‌ماند (همان کلید امضا).
+
+            </div>
