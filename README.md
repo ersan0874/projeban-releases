@@ -372,11 +372,12 @@ claude mcp add --transport http projeban http://<آدرس-گوشی>:35777/mcp \
 
 | دسته | ابزارها |
 |---|---|
-| خواندن | `list_projects` · `get_project` · `list_tasks` · `list_ideas` · `get_day` |
-| ساختن | `create_project` · `add_phase` · `add_task` · `add_idea` |
-| تغییر | `update_project` · `update_task` · `schedule_task` · `unschedule_task` |
+| خواندن | `list_projects` · `get_project` · `list_tasks` · `list_ideas` · `list_drafts` · `list_resources` · `get_day` |
+| ساختن | `create_project` · `add_phase` · `add_task` · `add_idea` · `add_draft` · `add_resource` |
+| تغییر | `update_project` · `update_phase` · `update_task` · `update_idea` · `file_draft` · `update_resource` · `schedule_task` · `unschedule_task` |
+| رمزها (فقط اگر اجازه بدهی) | `list_passwords` · `get_password` · `save_password` |
 
-> 🛡️ **حذف کردن از بیرون ممکن نیست.** گاوصندوق رمزها هم هیچ‌وقت از طریق MCP در دسترس نیست. اگر توکن لو رفت، در همان صفحه «ساخت کلید جدید» را بزن تا کلید قبلی باطل شود.
+> 🛡️ **حذف کردن از بیرون ممکن نیست.** گاوصندوق رمزها فقط وقتی از طریق MCP (سرور Cloudflare خودت) در دسترس است که در **تنظیمات ← همگام‌سازی** گزینه «رمزها برای هوش مصنوعی (MCP) قابل دیدن باشند» را روشن کنی؛ با خاموش کردنش همه رمزها از سرور پاک می‌شوند. اگر توکن لو رفت، در همان صفحه «ساخت کلید جدید» را بزن تا کلید قبلی باطل شود.
 
 ---
 
@@ -385,7 +386,7 @@ claude mcp add --transport http projeban http://<آدرس-گوشی>:35777/mcp \
 | | |
 |---|---|
 | 📱 **محل ذخیره** | همه اطلاعات روی گوشی خودت. بدون حساب کاربری، بدون سرور، بدون آنالیتیکس و تبلیغ. |
-| 🔐 **گاوصندوق** | رمزنگاری AES-256-GCM با کلید نگه‌داری‌شده در Android Keystore و قفل بیومتریک. هرگز همگام، پشتیبان‌گیری یا به هوش مصنوعی فرستاده نمی‌شود. |
+| 🔐 **گاوصندوق** | رمزنگاری AES-256-GCM با کلید نگه‌داری‌شده در Android Keystore و قفل بیومتریک. پشتیبان‌گیری نمی‌شود و فقط اگر خودت اجازه بدهی با سرور شخصی‌ات همگام و برای MCP قابل دیدن می‌شود. |
 | ✨ **دستیار هوشمند** | فقط وقتی از آن استفاده کنی، درخواستت همراه با اطلاعات لازم پروژه‌ها مستقیم از گوشی به API شرکت Anthropic فرستاده می‌شود. |
 | 🔌 **MCP** | خاموش است تا خودت روشنش کنی؛ فقط در شبکه محلی و فقط با توکن کار می‌کند. |
 
